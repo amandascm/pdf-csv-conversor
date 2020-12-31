@@ -8,6 +8,7 @@ logging.basicConfig(filename='info.log', filemode='w', level=logging.DEBUG)
 class pdfTables():
 	def __init__(self, fileName):
 		#initialize attributes
+		self.fileTables = []
 		self.fileName = fileName
 		configFile = open("config.json")
 		self.config = json.load(configFile)
@@ -27,6 +28,7 @@ class pdfTables():
 				break
 			except:
 				logging.error(f"{self.fileName}: it was not recognized as a PDF")
+				break
 
 	def showTablesSamples(self):
 		counter = 0
@@ -47,7 +49,7 @@ class pdfTables():
 		except:
 			logging.warning(f"{self.fileName}: table/{self.fileName[0:-4]} directory already exists")
 		print(f"\n--------------{self.fileName} saving tables process--------------\n")
-		print(f"\nWe found {str(len(self.fileTables))} table(s)\n")
+		print(f"\nWe found {len(self.fileTables)} table(s)\n")
 		if self.config["saveAllTables"] is True:
 			counter = 0
 			for table in self.fileTables:
