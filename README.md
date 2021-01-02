@@ -5,6 +5,7 @@ This project aims to convert a set of pdf files to csv (if one of them has more 
 ## Dependencies
 
 - [Python](https://www.python.org/downloads/)
+- [Java](https://www.java.com/pt-BR/download/manual.jsp)
 
 ## Execution
 
