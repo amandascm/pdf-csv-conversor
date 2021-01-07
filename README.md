@@ -15,7 +15,7 @@ This project aims to convert a set of pdf files to csv (if one of them has more 
 - Make sure your system is configured to allow script execution
 - Run the command:
 	```
-	 .\winScript.ps1
+	 .\scripts\winScript.ps1
 	```
 
 ### Linux
@@ -23,10 +23,10 @@ This project aims to convert a set of pdf files to csv (if one of them has more 
 - Open a terminal in the **src** directory of the project
 - Run the commands:
 	```
-	 chmod +x script.sh
+	 chmod +x scripts/script.sh
 	```
 	``` 
-	./script.sh
+	./scripts/script.sh
 	```
-The first execution will prepare a virtual environment and create the **src/pdf** directory : where you must include your pdf files and reexecute the project.
+The first execution will prepare a virtual environment and create the **src/pdf** directory: where you must include your pdf files and reexecute the project.
 All tables will be at the **src/table** directory inside a specific folder which name corresponds to the name of the document that contained them.
